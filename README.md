@@ -13,6 +13,6 @@ This is a rudimentary implementation of Whisper ASR over websockets for test pur
 
 ## ToDo
 - [ ] Configure arument parser for client to take config.
-- [ ] Try t move out of speech_recognition library for streaming and incremental input.
+- [ ] Try to move out of speech_recognition library for streaming and incremental input.
 - [ ] Support for multiple connections.
 - [ ] Implement real time language translation over websockets.
