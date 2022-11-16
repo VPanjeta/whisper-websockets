@@ -4,16 +4,17 @@ import json
 import io
 import speech_recognition as sr
 
+config = {
+    "language": 'en',
+    "model": "base",
+    "verbose": False,
+    "stop_word": "stop"
+}
 
 async def microphone_client():
     async with websockets.connect(
             'ws://0.0.0.0:8000/') as websocket:
-        await websocket.send(json.dumps({
-            "language": 'en',
-            "model": "base",
-            "verbose": False,
-            "stop_word": "stop"
-        }))
+        await websocket.send(json.dumps(config))
         r = sr.Recognizer()
 
         while True:
